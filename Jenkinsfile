@@ -11,6 +11,7 @@ pipeline {
 
         stage('Install Docker') {
       steps {
+        sh 'sudo chown jenkins: -R \$PWD/'
         sh 'apt-get update -y && apt-get install docker -y'
       }
     }

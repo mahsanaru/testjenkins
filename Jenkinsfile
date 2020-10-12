@@ -6,17 +6,15 @@ pipeline {
   }
 
   agent any
-
+    
   stages {
 
-    stage('Install Docker') {
+        stage('Install Docker') {
       steps {
         sh 'apt-get update -y && apt-get install docker -y'
       }
     }
     
-  stages {
-
     stage('Checkout Source') {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'

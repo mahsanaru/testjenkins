@@ -8,13 +8,6 @@ pipeline {
   agent any
     
   stages {
-
-        stage('Install Docker') {
-      steps {
-        sh 'chown jenkins: -R \$PWD/'
-        sh 'apt-get update -y && apt-get install docker -y'
-      }
-    }
     
     stage('Checkout Source') {
       steps {
